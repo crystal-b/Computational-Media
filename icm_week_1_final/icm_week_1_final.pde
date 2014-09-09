@@ -2,10 +2,11 @@ size (900, 567);
 background (255);
 float space = 5;
 float run = 215;
-float peak = 192;
-float base = 375.2177;
 float halfRun = run/2;
+float peak = 192;
+float base = sqrt(pow(run,2)-pow(halfRun,2))+peak;
 float z = 75.3;
+float a = 48;
 noStroke ();
 //lvl1
 fill (66,63,66);
@@ -13,7 +14,7 @@ triangle (0, peak-(base-peak)-space, halfRun, peak-(base-peak)-space, 0, peak-sp
 triangle (halfRun+2*space, peak-(base-peak)-space, 3*halfRun+2*space, peak-(base-peak)-space, run+2*space, peak-space);
 triangle (3*halfRun+4*space, peak-(base-peak)-space, 5*halfRun+4*space, peak-(base-peak)-space, 2*run+4*space, peak-space);
 triangle (5*halfRun+6*space, peak-(base-peak)-space, 7*halfRun+6*space, peak-(base-peak)-space, 3*run+6*space, peak-space);
-triangle (7*halfRun+8*space, peak-(base-peak)-space, 900, peak-(base-peak)-space, 4*run+8*space, peak-space);
+triangle (7*halfRun+8*space, peak-(base-peak)-space, 9*halfRun+8*space, peak-(base-peak)-space, 4*run+8*space, peak-space);
 fill (116,109,117);
 triangle (halfRun+space, peak-(base-peak)-space, run+space, peak-space, space, peak-space);
 triangle (3*halfRun+3*space, peak-(base-peak)-space, 2*run+3*space, peak-space, run+3*space, peak-space);
@@ -45,14 +46,14 @@ triangle (5*halfRun+5*space, base+space, 3*run+5*space, 2*base-peak+space, 2*run
 triangle (7*halfRun+7*space, base+space, 4*run+7*space, 2*base-peak+space, 3*run+7*space, 2*base-peak+space);
 //color!
 fill (243,223,245);
-triangle (5*halfRun+6*space, 5*z+peak-(base-peak)-space, 7*halfRun+6*space, 5*z+peak-(base-peak)-space, 3*run+6*space, 5*z+peak-space);
+triangle (3*halfRun+4*space, peak-(base-peak)-space, 9*halfRun+8*space, peak-(base-peak)-space, 3*run+6*space, 5*z+peak-space);
 fill (216,162,222);
-triangle (5*halfRun+6*space, 4*z+peak-(base-peak)-space, 7*halfRun+6*space, 4*z+peak-(base-peak)-space, 3*run+6*space, 4*z+peak-space);
+triangle (3*halfRun+4*space+a, peak-(base-peak)-space, 9*halfRun+8*space-a, peak-(base-peak)-space, 3*run+6*space, 4*z+peak-space);
 fill (191,119,199);
-triangle (5*halfRun+6*space, 3*z+peak-(base-peak)-space, 7*halfRun+6*space, 3*z+peak-(base-peak)-space, 3*run+6*space, 3*z+peak-space);
+triangle (3*halfRun+4*space+2*a, peak-(base-peak)-space, 9*halfRun+8*space-2*a, peak-(base-peak)-space, 3*run+6*space, 3*z+peak-space);
 fill (143,72,150);
-triangle (5*halfRun+6*space, 2*z+peak-(base-peak)-space, 7*halfRun+6*space, 2*z+peak-(base-peak)-space, 3*run+6*space, 2*z+peak-space);
+triangle (3*halfRun+4*space+3*a, peak-(base-peak)-space, 9*halfRun+8*space-3*a, peak-(base-peak)-space, 3*run+6*space, 2*z+peak-space);
 fill (121,61,128);
-triangle (5*halfRun+6*space, z+peak-(base-peak)-space, 7*halfRun+6*space, z+peak-(base-peak)-space, 3*run+6*space, z+peak-space);
+triangle (3*halfRun+4*space+4*a, peak-(base-peak)-space, 9*halfRun+8*space-4*a, peak-(base-peak)-space, 3*run+6*space, z+peak-space);
 fill (99,49,105);
 triangle (5*halfRun+6*space, peak-(base-peak)-space, 7*halfRun+6*space, peak-(base-peak)-space, 3*run+6*space, peak-space);
